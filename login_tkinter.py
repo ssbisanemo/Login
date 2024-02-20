@@ -1,6 +1,10 @@
 import os, binascii, hashlib
 import tkinter as t
 
+if not os.path.isfile('usr.txt'): # If usr.txt does not exist it writes to it
+    with open('usr.txt', 'w') as f:
+        f.write('[]')
+
 def hash_password(passwo):
     salt = hashlib.sha256(os.urandom(60)).hexdigest().encode('ascii')
     pwdhash = hashlib.pbkdf2_hmac('sha512', passwo.encode('utf-8'),
