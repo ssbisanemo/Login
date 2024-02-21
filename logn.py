@@ -42,7 +42,7 @@ def password(pw):
     # lo = False
     # ln = False    -- Very unnecessary code, but I'm keeping it here for now. 
     if len(pw) <= 8:
-        print('PASSWORD MUS BE AT LEAST 8 LETTERS LONG'); return False
+        print('PASSWORD MUST BE AT LEAST 8 LETTERS LONG'); return False
     elif pw.isdigit():
         print('PASSWORD MUST CONTAIN A LETTER'); return False
     elif pw.isupper() :
